@@ -1,0 +1,14 @@
+numpy
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn
+catboost
+xgboost
+Flask
+dill
+sklearn
+scikit-learn
+openpyxl
+-e .
