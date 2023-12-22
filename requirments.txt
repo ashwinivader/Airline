@@ -8,7 +8,5 @@ catboost
 xgboost
 Flask
 dill
-sklearn
-scikit-learn
 openpyxl
 -e .
