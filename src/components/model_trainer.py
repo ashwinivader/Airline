@@ -6,6 +6,7 @@ import os
 import sys
 from dataclasses import dataclass
 
+
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
     AdaBoostRegressor,
@@ -25,7 +26,7 @@ from src.utils import save_object,evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path=os.path.join("artifacts","model.pkl")
+    trained_model_file_path=os.path.join("artifacts","model.joblib")
 
 class ModelTrainer:
     def __init__(self):
