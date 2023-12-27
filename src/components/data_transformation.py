@@ -16,6 +16,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
+    #path pf preprocessing object
     preprocessor_obj_file_path=os.path.join('artifacts','preprocessor.joblib')
 
 
@@ -208,7 +209,7 @@ class DataTransformation:
                 file_path=DataTransformationConfig.preprocessor_obj_file_path,
                 obj=preprocessing_obj
             )
-
+#Data Transformation will return train array and test array which will be having features and labels.
             return (
                 train_arr,
                 test_arr,

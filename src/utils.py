@@ -7,6 +7,7 @@ import dill
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 from src.exception import CustomException
+from src.logger import logging
 
 
 def save_object(file_path, obj):
@@ -46,7 +47,7 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
             test_model_score = r2_score(y_test, y_test_pred)
 
             report[list(models.keys())[i]] = test_model_score
-
+        logging.info(report)
         return report
 
     except Exception as e:
