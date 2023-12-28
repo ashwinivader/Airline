@@ -19,6 +19,6 @@ version='0.0.1',
 author= "Name",
 author_email="abc.",
 packages= find_packages(),
-install_requires=get_requirements('requirments.txt')
+install_requires=get_requirements('requirements.txt')
 )
 
