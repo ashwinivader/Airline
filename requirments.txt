@@ -11,4 +11,5 @@ dill
 openpyxl
 pickle
 streamlit
+joblib
 -e .
