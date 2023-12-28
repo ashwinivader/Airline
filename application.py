@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
-from src.utils import load_object
+#from src.utils import load_object
 #from src.components.model_trainer import ModelTrainerConfig
 #from src.components.data_transformation import DataTransformationConfig as preprocessing_obj
 from src.logger import logging
+import joblib
 from joblib import dump, load
 import os
 import matplotlib.pyplot as plt
@@ -34,9 +35,9 @@ def main():
                predict_button = st.button("Predict", key="predict_button", disabled=not predict_button_enabled)
                if predict_button:
                  st.write("Clicked on predict")
-                 st.write(os.path.join('artifacts',"preprocessor.joblib"))
-                 preproceesing_object=load(os.path.join('artifacts',"preprocessor.joblib"))
-                 model=load(os.path.join('artifacts',"model.joblib"))
+                 #st.write(os.path.join('artifacts',"preprocessor.joblib"))
+                 preproceesing_object=joblib.load(os.path.join('artifacts',"preprocessor.joblib"))
+                 model=joblib.load(os.path.join('artifacts',"model.joblib"))
                  df.dropna(subset=['location'],axis=0,inplace=True)
                  input_feature_test_df=df.drop(['availability'],axis=1)
                  input_feature_test_arr=preproceesing_object.transform(input_feature_test_df)
