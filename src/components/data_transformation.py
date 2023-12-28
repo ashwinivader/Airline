@@ -186,11 +186,13 @@ class DataTransformation:
             
             raw_df.dropna(subset=['location'],axis=0,inplace=True)
             #X=train_df.drop(['price','area_type', 'availability'],axis=1)
-            input_feature_train_df=raw_df.drop(['price','availability'],axis=1)
+            #input_feature_train_df=raw_df.drop(['price','availability'],axis=1)
+            input_feature_train_df=raw_df.drop(['price'],axis=1)
             target_feature_train_df=raw_df['price']
 
             test_df.dropna(subset=['location'],axis=0,inplace=True)
-            input_feature_test_df=test_df.drop(['price','availability'],axis=1)
+            #input_feature_test_df=test_df.drop(['price','availability'],axis=1)
+            input_feature_test_df=test_df.drop(['price'],axis=1)
             target_feature_test_df=test_df['price']
 
             logging.info(
