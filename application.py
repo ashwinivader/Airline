@@ -1,16 +1,9 @@
 import streamlit as st
 import pandas as pd
-#from src.utils import load_object
-#from src.components.model_trainer import ModelTrainerConfig
-#from src.components.data_transformation import DataTransformationConfig as preprocessing_obj
 from src.logger import logging
 import joblib
-#from joblib import dump, load
 import os
 import matplotlib.pyplot as plt
-#from matplotlib.backends.backend_agg import RendererAgg
-#_lock = RendererAgg.lock
-
 
 def main():
     st.title("Housing price prediction")

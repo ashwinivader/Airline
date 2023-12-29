@@ -41,23 +41,17 @@ class DataIngestion:
         logging.info("Data injestion is completed")
         return (self.ingestion_config.train_data_path,self.ingestion_config.test_data_path,self.ingestion_config.raw_data_path)
 
-
-        
-
-
-
-
     
 #if __name__=="__main__":
-#    obj=DataIngestion()
-  #  obj.initiate_data_ingestion()
+    obj=DataIngestion()
+    obj.initiate_data_ingestion()
 
-    #train_data,test_data,raw_data=obj.initiate_data_ingestion()
-    #print(train_data,test_data,raw_data)
+    train_data,test_data,raw_data=obj.initiate_data_ingestion()
+    print(train_data,test_data,raw_data)
 
-    #datatransformation=DataTransformation
-    ##datatransformation.data_transformer_function(train_data,test_data)
-    #train_arr,test_arr,_=datatransformation.perform_transformation(train_data,test_data,raw_data) 
+    datatransformation=DataTransformation
+    #datatransformation.data_transformer_function(train_data,test_data)
+    train_arr,test_arr,_=datatransformation.perform_transformation(train_data,test_data,raw_data) 
     
 
     modeltrainer=ModelTrainer()
